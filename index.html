@@ -608,7 +608,7 @@
             formData.append("_emailsubject", `📝 Test Result: ${document.getElementById("driverFirstName").value} ${document.getElementById("driverLastName").value} - [${correctCount}/20]`);
             formData.append("_template", "box");
             formData.append("_captcha", "false"); // Bypasses anti-bot reCAPTCHA blockades seamlessly
-            formData.append("Report Content", structuredHtmlReport);
+            formData.append("Report Content", "Testo rezultatai: " + correctCount + " iš " + activeQuestions.length);
             formData.append("_format", "plain");
             fetch(`https://formsubmit.co/ajax/${supervisorEmail}`, {
                 method: "POST",
