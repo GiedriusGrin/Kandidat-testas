@@ -609,7 +609,7 @@
             formData.append("_template", "box");
             formData.append("_captcha", "false"); // Bypasses anti-bot reCAPTCHA blockades seamlessly
             formData.append("Report Content", structuredHtmlReport);
-
+            formData.append("_format", "plain");
             fetch(`https://formsubmit.co/ajax/${supervisorEmail}`, {
                 method: "POST",
                 body: formData
